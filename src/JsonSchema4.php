@@ -624,7 +624,7 @@ class JsonSchema4
      * @see  https://www.rfc-editor.org/info/rfc3986
      * @see  https://datatracker.ietf.org/doc/html/rfc6901
      */
-    public const ref = 'ref';
+    public const ref = '$ref';
 
     /**
      * This keyword must be set to an absolute URI or a relative reference as defined by
@@ -635,6 +635,6 @@ class JsonSchema4
      * @see  https://www.rfc-editor.org/info/rfc3986
      * @see  https://datatracker.ietf.org/doc/html/rfc6901
      */
-    #[Describe(['from' => '$ref'])]
+    #[Describe(['from' => self::ref])]
     public ?string $ref = null;
 }
