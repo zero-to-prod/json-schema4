@@ -12,15 +12,22 @@ class ItemsTest extends TestCase
     {
         $json = <<<JSON
         {
-          "items": "items"
+          "items": {
+              "id" :  1
+            }
         }
         JSON;
 
         $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
-        self::assertEquals(
-            expected: 'items',
+        self::assertInstanceOf(
+            expected: JsonSchema4::class,
             actual: $JsonSchema4->items,
+        );
+
+        self::assertEquals(
+            expected: 1,
+            actual: $JsonSchema4->items->id,
         );
     }
 
@@ -34,8 +41,7 @@ class ItemsTest extends TestCase
 
         $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
-        self::assertEquals(
-            expected: [],
+        self::assertNull(
             actual: $JsonSchema4->items,
         );
     }

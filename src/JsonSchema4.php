@@ -284,7 +284,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.1
      */
-    public mixed $items = [];
+    public null|self $items = null;
 
     /**
      * This keyword must be set to a non-negative integer.
