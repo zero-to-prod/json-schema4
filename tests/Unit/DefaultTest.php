@@ -16,11 +16,11 @@ class DefaultTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'default',
-            actual: $Info->default,
+            actual: $JsonSchema4->default,
         );
     }
 
@@ -32,10 +32,10 @@ class DefaultTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->default,
+            actual: $JsonSchema4->default,
         );
     }
 }

@@ -19,16 +19,16 @@ class AdditionalPropertiesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertInstanceOf(
             expected: JsonSchema4::class,
-            actual: $Info->additionalProperties,
+            actual: $JsonSchema4->additionalProperties,
         );
 
         self::assertEquals(
             expected: 'title',
-            actual: $Info->additionalProperties->title,
+            actual: $JsonSchema4->additionalProperties->title,
         );
     }
 
@@ -40,10 +40,10 @@ class AdditionalPropertiesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertFalse(
-            condition: $Info->additionalProperties,
+            condition: $JsonSchema4->additionalProperties,
         );
     }
 
@@ -55,10 +55,10 @@ class AdditionalPropertiesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->additionalProperties,
+            actual: $JsonSchema4->additionalProperties,
         );
     }
 }

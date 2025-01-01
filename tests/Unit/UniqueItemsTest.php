@@ -17,10 +17,10 @@ class UniqueItemsTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertTrue(
-            condition: $Info->uniqueItems,
+            condition: $JsonSchema4->uniqueItems,
         );
     }
 
@@ -32,10 +32,10 @@ class UniqueItemsTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertFalse(
-            condition: $Info->uniqueItems,
+            condition: $JsonSchema4->uniqueItems,
         );
     }
 }

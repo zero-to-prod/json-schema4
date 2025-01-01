@@ -16,11 +16,11 @@ class PatternTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'pattern',
-            actual: $Info->pattern,
+            actual: $JsonSchema4->pattern,
         );
     }
 
@@ -32,10 +32,10 @@ class PatternTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->pattern,
+            actual: $JsonSchema4->pattern,
         );
     }
 }

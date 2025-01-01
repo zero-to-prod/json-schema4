@@ -17,11 +17,11 @@ class MaximumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 1.1,
-            actual: $Info->maximum,
+            actual: $JsonSchema4->maximum,
         );
     }
 
@@ -33,10 +33,10 @@ class MaximumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->maximum,
+            actual: $JsonSchema4->maximum,
         );
     }
 }

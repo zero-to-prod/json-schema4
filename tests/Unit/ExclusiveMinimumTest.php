@@ -17,10 +17,10 @@ class ExclusiveMinimumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertTrue(
-            condition: $Info->exclusiveMinimum,
+            condition: $JsonSchema4->exclusiveMinimum,
         );
     }
 
@@ -32,10 +32,10 @@ class ExclusiveMinimumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertFalse(
-            condition: $Info->exclusiveMinimum,
+            condition: $JsonSchema4->exclusiveMinimum,
         );
     }
 }

@@ -16,11 +16,11 @@ class FormatTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'format',
-            actual: $Info->format,
+            actual: $JsonSchema4->format,
         );
     }
 
@@ -32,10 +32,10 @@ class FormatTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->format,
+            actual: $JsonSchema4->format,
         );
     }
 }

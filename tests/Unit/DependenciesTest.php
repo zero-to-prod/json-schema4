@@ -20,11 +20,11 @@ class DependenciesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'id',
-            actual: $Info->dependencies['name']['id'],
+            actual: $JsonSchema4->dependencies['name']['id'],
         );
     }
 
@@ -36,11 +36,11 @@ class DependenciesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'id',
-            actual: $Info->dependencies['id'],
+            actual: $JsonSchema4->dependencies['id'],
         );
     }
 
@@ -52,10 +52,10 @@ class DependenciesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->dependencies,
+            actual: $JsonSchema4->dependencies,
         );
     }
 }

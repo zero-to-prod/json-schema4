@@ -16,11 +16,11 @@ class TitleTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'title',
-            actual: $Info->title,
+            actual: $JsonSchema4->title,
         );
     }
 
@@ -32,10 +32,10 @@ class TitleTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->title,
+            actual: $JsonSchema4->title,
         );
     }
 }

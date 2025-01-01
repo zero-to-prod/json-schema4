@@ -16,11 +16,11 @@ class ItemsTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'items',
-            actual: $Info->items,
+            actual: $JsonSchema4->items,
         );
     }
 
@@ -32,11 +32,11 @@ class ItemsTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: [],
-            actual: $Info->items,
+            actual: $JsonSchema4->items,
         );
     }
 }

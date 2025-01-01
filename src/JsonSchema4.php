@@ -86,7 +86,6 @@ class JsonSchema4
      * This keyword must be set to a string
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.6.1
-     * @see  $title
      */
     public ?string $title = null;
 
@@ -102,7 +101,6 @@ class JsonSchema4
      * This keyword must be set to a string
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.6.1
-     * @see  $description
      */
     public ?string $description = null;
 
@@ -118,7 +116,6 @@ class JsonSchema4
      * This keyword can contain any valid JSON value.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.7.3
-     * @see  $default
      */
     #[Describe(['nullable'])]
     public mixed $default;
@@ -240,7 +237,6 @@ class JsonSchema4
      * This keyword must be set to a string that is a valid regular expression.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.2.3
-     * @see  $pattern
      */
     public ?string $pattern = null;
 
@@ -519,7 +515,6 @@ class JsonSchema4
      * This keyword must be set to an array of JSON values, all of which must be unique.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.1
-     * @see  $enum
      */
     public ?array $enum = null;
 
@@ -580,7 +575,6 @@ class JsonSchema4
      * This keyword must be set to an array of JSON Schemas.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.3
-     * @see $allOf
      *
      * @var array<self> $allOf
      */

@@ -17,10 +17,10 @@ class ExclusiveMaximumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertTrue(
-            condition: $Info->exclusiveMaximum,
+            condition: $JsonSchema4->exclusiveMaximum,
         );
     }
 
@@ -32,10 +32,10 @@ class ExclusiveMaximumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertFalse(
-            condition: $Info->exclusiveMaximum,
+            condition: $JsonSchema4->exclusiveMaximum,
         );
     }
 }

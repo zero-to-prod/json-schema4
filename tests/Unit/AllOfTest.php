@@ -19,16 +19,16 @@ class AllOfTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertInstanceOf(
             expected: JsonSchema4::class,
-            actual: $Info->allOf[0],
+            actual: $JsonSchema4->allOf[0],
         );
 
         self::assertEquals(
             expected: 'title',
-            actual: $Info->allOf[0]->title,
+            actual: $JsonSchema4->allOf[0]->title,
         );
     }
 
@@ -40,10 +40,10 @@ class AllOfTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->allOf,
+            actual: $JsonSchema4->allOf,
         );
     }
 }

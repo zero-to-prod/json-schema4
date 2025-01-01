@@ -16,11 +16,11 @@ class IdTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'http://json-schema.org/schema',
-            actual: $Info->id,
+            actual: $JsonSchema4->id,
         );
     }
 
@@ -32,10 +32,10 @@ class IdTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->id,
+            actual: $JsonSchema4->id,
         );
     }
 }

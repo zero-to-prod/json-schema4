@@ -20,11 +20,11 @@ class PatternPropertiesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'id',
-            actual: $Info->patternProperties['name']->id,
+            actual: $JsonSchema4->patternProperties['name']->id,
         );
     }
 
@@ -36,11 +36,11 @@ class PatternPropertiesTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: [],
-            actual: $Info->patternProperties,
+            actual: $JsonSchema4->patternProperties,
         );
     }
 }

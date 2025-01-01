@@ -16,11 +16,11 @@ class TypeTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'object',
-            actual: $Info->type,
+            actual: $JsonSchema4->type,
         );
     }
 
@@ -32,11 +32,11 @@ class TypeTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'object',
-            actual: $Info->type[0],
+            actual: $JsonSchema4->type[0],
         );
     }
 
@@ -48,10 +48,10 @@ class TypeTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->type,
+            actual: $JsonSchema4->type,
         );
     }
 }

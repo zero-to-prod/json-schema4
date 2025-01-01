@@ -16,11 +16,11 @@ class RefTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: '#/properties/foo',
-            actual: $Info->ref,
+            actual: $JsonSchema4->ref,
         );
     }
     #[Test] public function null(): void
@@ -31,10 +31,10 @@ class RefTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->ref,
+            actual: $JsonSchema4->ref,
         );
     }
 }

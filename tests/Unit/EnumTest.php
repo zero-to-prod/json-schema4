@@ -16,11 +16,11 @@ class EnumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: ['enum'],
-            actual: $Info->enum,
+            actual: $JsonSchema4->enum,
         );
     }
 
@@ -32,10 +32,10 @@ class EnumTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->enum,
+            actual: $JsonSchema4->enum,
         );
     }
 }

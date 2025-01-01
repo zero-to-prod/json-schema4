@@ -20,11 +20,11 @@ class DefinitionsTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'id',
-            actual: $Info->definitions['name']->id,
+            actual: $JsonSchema4->definitions['name']->id,
         );
     }
 
@@ -36,11 +36,11 @@ class DefinitionsTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: [],
-            actual: $Info->definitions,
+            actual: $JsonSchema4->definitions,
         );
     }
 }

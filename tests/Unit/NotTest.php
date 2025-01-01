@@ -17,16 +17,16 @@ class NotTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertInstanceOf(
             expected: JsonSchema4::class,
-            actual: $Info->not,
+            actual: $JsonSchema4->not,
         );
 
         self::assertEquals(
             expected: 'title',
-            actual: $Info->not->title,
+            actual: $JsonSchema4->not->title,
         );
     }
 
@@ -38,10 +38,10 @@ class NotTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->not,
+            actual: $JsonSchema4->not,
         );
     }
 }

@@ -17,11 +17,11 @@ class MultipleOfTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 1,
-            actual: $Info->multipleOf,
+            actual: $JsonSchema4->multipleOf,
         );
     }
 
@@ -33,10 +33,10 @@ class MultipleOfTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->multipleOf,
+            actual: $JsonSchema4->multipleOf,
         );
     }
 }

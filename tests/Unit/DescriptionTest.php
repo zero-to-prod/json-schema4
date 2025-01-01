@@ -16,11 +16,11 @@ class DescriptionTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertEquals(
             expected: 'description',
-            actual: $Info->description,
+            actual: $JsonSchema4->description,
         );
     }
 
@@ -32,10 +32,10 @@ class DescriptionTest extends TestCase
         }
         JSON;
 
-        $Info = JsonSchema4::from(json_decode($json, true));
+        $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
         self::assertNull(
-            actual: $Info->description,
+            actual: $JsonSchema4->description,
         );
     }
 }
