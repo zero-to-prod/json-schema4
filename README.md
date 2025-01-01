@@ -30,7 +30,7 @@ A [DataModel](https://github.com/zero-to-prod/data-model) for the [Json Schema D
 Install `Zerotoprod\JsonSchema4` via [Composer](https://getcomposer.org/):
 
 ```shell
-composer require zero-to-prod/omdb
+composer require zero-to-prod/json-schema4
 ```
 
 This will add the package to your project’s dependencies and create an autoloader entry for it.
