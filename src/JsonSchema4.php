@@ -57,22 +57,8 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.6.1
      * @see  https://www.rfc-editor.org/info/rfc3986
      */
-    #[Describe(['cast' => [self::class, 'schema']])]
-    public ?string $schema;
-
-    /**
-     * The "$schema" keyword is both used as a JSON Schema version identifier and the
-     * location of a resource which is itself a JSON Schema, which describes any
-     * schema written for this particular version.
-     *
-     * @see  $schema
-     * @see  https://www.rfc-editor.org/info/rfc3986
-     * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.6.1
-     */
-    private static function schema($value, $context)
-    {
-        return $context['$schema'] ?? null;
-    }
+    #[Describe(['from' => '$schema'])]
+    public ?string $schema = null;
 
     /**
      * This keyword must be set to a string
@@ -117,8 +103,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.7.3
      */
-    #[Describe(['nullable'])]
-    public mixed $default;
+    public mixed $default = null;
 
     /**
      * This keyword must be set to a positive number greater than 0.
@@ -374,7 +359,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.3
      *
-     * @var array<string> $required
+     * @var string[] $required
      */
     public ?array $required = null;
 
@@ -413,7 +398,7 @@ class JsonSchema4
      * This keyword must be set to an object where each value is a valid JSON Schema
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4
-     * @see  $properties
+     * @see  $definitions
      */
     public const definitions = 'definitions';
 
@@ -532,21 +517,9 @@ class JsonSchema4
      * or a non-empty array of unique strings that correspond to one of the supported types
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.2
-     * @var string[]|string $type
+     * @var string[]|string|null $type
      */
-    #[Describe(['cast' => [self::class, 'type']])]
     public string|array|null $type = null;
-
-    private static function type($value, $context): string|array|null
-    {
-        if (!isset($context['type'])) {
-            return null;
-        }
-
-        return is_array($value)
-            ? array_map(static fn(string $enum) => $enum, $value)
-            : $value;
-    }
 
     /**
      * This keyword must be set to a string representing a format.
@@ -567,7 +540,7 @@ class JsonSchema4
      * This keyword must be set to an array of JSON Schemas.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.3
-     * @see $allOf
+     * @see  $allOf
      */
     public const allOf = 'allOf';
 
@@ -576,7 +549,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.3
      *
-     * @var array<self> $allOf
+     * @var self[] $allOf
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -588,9 +561,7 @@ class JsonSchema4
      * This keyword must be set to an array of JSON Schemas.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.4
-     * @see $anyOf
-     *
-     * @var array<self> $anyOf
+     * @see  $anyOf
      */
     public const anyOf = 'anyOf';
 
@@ -599,7 +570,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.4
      *
-     * @var array<self> $anyOf
+     * @var self[] $anyOf
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -611,9 +582,7 @@ class JsonSchema4
      * This keyword must be set to an array of JSON Schemas.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.5
-     * @see $oneOf
-     *
-     * @var array<self> $oneOf
+     * @see  $oneOf
      */
     public const oneOf = 'oneOf';
 
@@ -622,7 +591,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.5
      *
-     * @var array<self> $oneOf
+     * @var self[] $oneOf
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -634,7 +603,7 @@ class JsonSchema4
      * This keyword must be set to a JSON Schema.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.6
-     * @see $not
+     * @see  $not
      */
     public const not = 'not';
 
@@ -666,22 +635,6 @@ class JsonSchema4
      * @see  https://www.rfc-editor.org/info/rfc3986
      * @see  https://datatracker.ietf.org/doc/html/rfc6901
      */
-    #[Describe(['cast' => [self::class, 'ref']])]
-    public ?string $ref;
-
-    /**
-     * This keyword must be set to an absolute URI or a relative reference as defined by
-     * RFC 3986, where its fragment (if any) can consist of a JSON Pointer as defined by
-     * RFC 6901
-     *
-     * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.7
-     * @see  $ref
-     * @see  https://www.rfc-editor.org/info/rfc3986
-     * @see  https://datatracker.ietf.org/doc/html/rfc6901
-     */
-    private static function ref($value, $context)
-    {
-        return $context['$ref'] ?? null;
-    }
-
+    #[Describe(['from' => '$ref'])]
+    public ?string $ref = null;
 }
