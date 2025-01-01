@@ -377,7 +377,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4.2
      */
     #[Describe(['cast' => [self::class, 'additionalProperties']])]
-    public mixed $additionalProperties;
+    public bool|self|null $additionalProperties;
 
     /**
      * This keyword can be either a boolean or a JSON Schema.
