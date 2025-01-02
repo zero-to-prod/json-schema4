@@ -7,6 +7,7 @@
 [![Packagist Downloads](https://img.shields.io/packagist/dt/zero-to-prod/json-schema4?color=blue)](https://packagist.org/packages/zero-to-prod/json-schema4/stats)
 [![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/json-schema4?color=f28d1a)](https://packagist.org/packages/zero-to-prod/json-schema4)
 [![License](https://img.shields.io/packagist/l/zero-to-prod/json-schema4?color=red)](https://github.com/zero-to-prod/json-schema4/blob/main/LICENSE.md)
+[![wakatime](https://wakatime.com/badge/user/24858ba3-e606-4aa3-a433-2e4fda44ce44/project/df8064b6-c2a4-447c-97cb-86c1d6f20670.svg)](https://wakatime.com/badge/user/24858ba3-e606-4aa3-a433-2e4fda44ce44/project/df8064b6-c2a4-447c-97cb-86c1d6f20670)
 
 ## Contents
 
