@@ -8,6 +8,7 @@
 [![Packagist Version](https://img.shields.io/packagist/v/zero-to-prod/json-schema4?color=f28d1a)](https://packagist.org/packages/zero-to-prod/json-schema4)
 [![License](https://img.shields.io/packagist/l/zero-to-prod/json-schema4?color=red)](https://github.com/zero-to-prod/json-schema4/blob/main/LICENSE.md)
 [![wakatime](https://wakatime.com/badge/github/zero-to-prod/json-schema4.svg)](https://wakatime.com/badge/github/zero-to-prod/json-schema4)
+[![Hits-of-Code](https://hitsofcode.com/github/zero-to-prod//json-schema4?branch=main)](https://hitsofcode.com/github/zero-to-prod//json-schema4/view?branch=main)
 
 ## Contents
 
