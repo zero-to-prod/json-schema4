@@ -8,6 +8,13 @@
     "json-schema4"
   ],
   "homepage": "https://github.com/zero-to-prod/json-schema4",
+  "support": {
+    "email": "dave0016@gmail.com",
+    "issues": "https://github.com/zero-to-prod/json-schema4/issues",
+    "source": "https://github.com/zero-to-prod/data-model",
+    "docs": "https://zero-to-prod.github.io/json-schema4/",
+    "security": "https://github.com/zero-to-prod/json-schema4/blob/main/SECURITY.md"
+  },
   "license": "MIT",
   "readme": "./README.md",
   "authors": [
