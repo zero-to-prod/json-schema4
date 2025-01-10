@@ -56,7 +56,7 @@ $JsonSchema4->schema;
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues](https://github.com/zero-to-prod/omdb/issues) page if you want to contribute.
+Feel free to check the [issues](https://github.com/zero-to-prod/json-schema4/issues) page if you want to contribute.
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature-branch`).
