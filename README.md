@@ -16,6 +16,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Publishing DataModels](#publishing-datamodels)
 - [Local Development](./LOCAL_DEVELOPMENT.md)
 - [Contributing](#contributing)
 
@@ -46,6 +47,16 @@ $JsonSchema4 = JsonSchema4::from(json_decode($json, true));
 
 $JsonSchema4->schema;
 ```
+
+## Publishing DataModels
+
+You can directly import these files into your project like this:
+
+```shell
+./vendor/bin/json-schema4 app/DataModels
+```
+
+The first argument is the destination of where the files are copied to.
 
 ## Contributing
 
