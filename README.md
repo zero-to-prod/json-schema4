@@ -53,7 +53,7 @@ $JsonSchema4->schema;
 You can directly import these files into your project like this:
 
 ```shell
-./vendor/bin/json-schema4 app/DataModels
+./vendor/bin/json-schema4 app/JsonSchema4
 ```
 
 The first argument is the destination of where the files are copied to.
