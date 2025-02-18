@@ -6,6 +6,8 @@ use Zerotoprod\DataModel\Describe;
 use Zerotoprod\JsonSchema4\Helpers\DataModel;
 
 /**
+ * A DataModel for the Json Schema Draft 4 Specification
+ *
  * JSON Schema defines the media type "application/schema+json",
  * a JSON based format for defining the structure of JSON data.
  * JSON Schema provides a contract for what JSON data is
@@ -16,6 +18,7 @@ use Zerotoprod\JsonSchema4\Helpers\DataModel;
  * hyperlink navigation, and interaction control of JSON data.
  *
  * @link https://json-schema.org/specification-links#draft-4
+ * @link https://github.com/zero-to-prod/json-schema4
  */
 class JsonSchema4
 {
@@ -27,6 +30,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.7.2
      * @see  $id
      * @see  https://www.rfc-editor.org/info/rfc3986
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const id = 'id';
 
@@ -35,6 +39,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.7.2
      * @see  https://www.rfc-editor.org/info/rfc3986
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?string $id = null;
 
@@ -46,6 +51,7 @@ class JsonSchema4
      * @see  $schema
      * @see  https://www.rfc-editor.org/info/rfc3986
      * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.6.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const schema = 'schema';
 
@@ -56,6 +62,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.6.1
      * @see  https://www.rfc-editor.org/info/rfc3986
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe(['from' => '$schema'])]
     public ?string $schema = null;
@@ -65,6 +72,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.6.1
      * @see  $title
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const title = 'title';
 
@@ -72,6 +80,7 @@ class JsonSchema4
      * This keyword must be set to a string
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.6.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?string $title = null;
 
@@ -80,6 +89,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.6.1
      * @see  $description
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const description = 'description';
 
@@ -87,6 +97,7 @@ class JsonSchema4
      * This keyword must be set to a string
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.6.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?string $description = null;
 
@@ -95,6 +106,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.7.3
      * @see  $default
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const default = 'default';
 
@@ -102,6 +114,7 @@ class JsonSchema4
      * This keyword can contain any valid JSON value.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.7.3
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public mixed $default = null;
 
@@ -110,6 +123,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.1
      * @see  $multipleOf
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const multipleOf = 'multipleOf';
 
@@ -117,6 +131,7 @@ class JsonSchema4
      * This keyword must be set to a positive number greater than 0.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?float $multipleOf = null;
 
@@ -125,6 +140,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.2
      * @see  $maximum
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const maximum = 'maximum';
 
@@ -132,6 +148,7 @@ class JsonSchema4
      * This keyword must be set to a number.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.2
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?float $maximum = null;
 
@@ -140,6 +157,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.3
      * @see  $exclusiveMaximum
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const exclusiveMaximum = 'exclusiveMaximum';
 
@@ -147,6 +165,7 @@ class JsonSchema4
      * This keyword must be set to a boolean.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.3
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public bool $exclusiveMaximum = false;
 
@@ -155,6 +174,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.3
      * @see  $minimum
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const minimum = 'minimum';
 
@@ -162,6 +182,7 @@ class JsonSchema4
      * This keyword must be set to a number.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.3
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?float $minimum = null;
 
@@ -170,6 +191,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.3
      * @see  $exclusiveMinimum
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const exclusiveMinimum = 'exclusiveMinimum';
 
@@ -177,6 +199,7 @@ class JsonSchema4
      * This keyword must be set to a boolean.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.1.3
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public bool $exclusiveMinimum = false;
 
@@ -185,6 +208,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.2.1
      * @see  $maxLength
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const maxLength = 'maxLength';
 
@@ -192,6 +216,7 @@ class JsonSchema4
      * This keyword must be set to a non-negative integer.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.2.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?int $maxLength = null;
 
@@ -200,6 +225,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.2.2
      * @see  $minLength
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const minLength = 'minLength';
 
@@ -207,6 +233,7 @@ class JsonSchema4
      * This keyword must be set to a non-negative integer.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.2.2
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public int $minLength = 0;
 
@@ -215,6 +242,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.2.3
      * @see  $pattern
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const pattern = 'pattern';
 
@@ -222,6 +250,7 @@ class JsonSchema4
      * This keyword must be set to a string that is a valid regular expression.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.2.3
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?string $pattern = null;
 
@@ -230,6 +259,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.1
      * @see  $additionalItems
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const additionalItems = 'additionalItems';
 
@@ -237,6 +267,7 @@ class JsonSchema4
      * This keyword can be either a boolean or a JSON Schema.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe(['cast' => [self::class, 'additionalItems']])]
     public bool|self|null $additionalItems = null;
@@ -261,6 +292,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.2
      * @see  $items
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const items = 'items';
 
@@ -268,6 +300,7 @@ class JsonSchema4
      * This keyword can be either a JSON Schema or an array of JSON Schemas.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public null|self $items = null;
 
@@ -276,6 +309,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.3
      * @see  $maxItems
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const maxItems = 'maxItems';
 
@@ -283,6 +317,7 @@ class JsonSchema4
      * This keyword must be set to a non-negative integer.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.3
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?int $maxItems = null;
 
@@ -291,6 +326,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.3
      * @see  $minItems
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const minItems = 'minItems';
 
@@ -298,6 +334,7 @@ class JsonSchema4
      * This keyword must be set to a non-negative integer.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.3
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public int $minItems = 0;
 
@@ -306,6 +343,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.4
      * @see  $uniqueItems
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const uniqueItems = 'uniqueItems';
 
@@ -313,6 +351,7 @@ class JsonSchema4
      * This keyword must be set to a boolean.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.3.4
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public bool $uniqueItems = false;
 
@@ -321,6 +360,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.1
      * @see  $maxProperties
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const maxProperties = 'maxProperties';
 
@@ -328,6 +368,7 @@ class JsonSchema4
      * This keyword must be set to a non-negative integer.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?int $maxProperties = null;
 
@@ -336,6 +377,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.2
      * @see  $minProperties
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const minProperties = 'minProperties';
 
@@ -343,6 +385,7 @@ class JsonSchema4
      * This keyword must be set to a non-negative integer.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.2
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public int $minProperties = 0;
 
@@ -351,6 +394,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.3
      * @see  $required
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const required = 'required';
 
@@ -360,6 +404,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.3
      *
      * @var string[] $required
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?array $required = null;
 
@@ -368,6 +413,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4.2
      * @see  $additionalProperties
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const additionalProperties = 'additionalProperties';
 
@@ -375,6 +421,7 @@ class JsonSchema4
      * This keyword can be either a boolean or a JSON Schema.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4.2
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe(['cast' => [self::class, 'additionalProperties']])]
     public bool|self|null $additionalProperties;
@@ -399,6 +446,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4
      * @see  $definitions
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const definitions = 'definitions';
 
@@ -408,6 +456,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4
      *
      * @var array<string, self> $definitions
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -420,6 +469,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4
      * @see  $properties
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const properties = 'properties';
 
@@ -429,6 +479,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4
      *
      * @var array<string, self> $properties
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -441,6 +492,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4
      * @see  $patternProperties
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const patternProperties = 'patternProperties';
 
@@ -450,6 +502,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.4
      *
      * @var array<string, self> $patternProperties
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -462,6 +515,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.5
      * @see  $dependencies
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const dependencies = 'dependencies';
 
@@ -471,6 +525,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.4.5
      *
      * @var array<string, mixed> $dependencies
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe(['cast' => [self::class, 'dependencies']])]
     public null|array $dependencies = null;
@@ -493,6 +548,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.1
      * @see  $enum
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const enum = 'enum';
 
@@ -500,6 +556,7 @@ class JsonSchema4
      * This keyword must be set to an array of JSON values, all of which must be unique.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.1
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?array $enum = null;
 
@@ -509,6 +566,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.2
      * @see  $type
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const type = 'type';
 
@@ -518,6 +576,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.2
      * @var string[]|string|null $type
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public string|array|null $type = null;
 
@@ -526,6 +585,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.7
      * @see  $format
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const format = 'format';
 
@@ -533,6 +593,7 @@ class JsonSchema4
      * This keyword must be set to a string representing a format.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.7
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public ?string $format = null;
 
@@ -541,6 +602,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.3
      * @see  $allOf
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const allOf = 'allOf';
 
@@ -550,6 +612,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.3
      *
      * @var self[] $allOf
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -562,6 +625,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.4
      * @see  $anyOf
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const anyOf = 'anyOf';
 
@@ -571,6 +635,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.4
      *
      * @var self[] $anyOf
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -583,6 +648,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.5
      * @see  $oneOf
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const oneOf = 'oneOf';
 
@@ -592,6 +658,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.5
      *
      * @var self[] $oneOf
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe([
         'cast' => [self::class, 'mapOf'],
@@ -604,6 +671,7 @@ class JsonSchema4
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.6
      * @see  $not
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const not = 'not';
 
@@ -611,6 +679,7 @@ class JsonSchema4
      * This keyword must be set to a JSON Schema.
      *
      * @link https://json-schema.org/draft-04/draft-fge-json-schema-validation-00#rfc.section.5.5.6
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public null|JsonSchema4 $not = null;
 
@@ -623,6 +692,7 @@ class JsonSchema4
      * @see  $ref
      * @see  https://www.rfc-editor.org/info/rfc3986
      * @see  https://datatracker.ietf.org/doc/html/rfc6901
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     public const ref = '$ref';
 
@@ -634,6 +704,7 @@ class JsonSchema4
      * @link https://json-schema.org/draft-04/draft-zyp-json-schema-04#rfc.section.7
      * @see  https://www.rfc-editor.org/info/rfc3986
      * @see  https://datatracker.ietf.org/doc/html/rfc6901
+     * @link https://github.com/zero-to-prod/json-schema4
      */
     #[Describe(['from' => self::ref])]
     public ?string $ref = null;
