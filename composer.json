@@ -53,7 +53,8 @@
     "phpunit/phpunit": "^10.0"
   },
   "bin": [
-    "bin/json-schema4"
+    "bin/json-schema4",
+    "bin/zero-to-prod-json-schema4"
   ],
   "suggest": {
     "zero-to-prod/data-model": "Transform Data to Type-Safe DTOs",
